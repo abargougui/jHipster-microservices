@@ -33,7 +33,7 @@
     "fluentMethods": true,
     "readOnly": false,
     "embedded": false,
-    "clientRootFolder": "signmanager",
+    "clientRootFolder": "signaturemanager",
     "applications": [
         "signaturemanager"
     ],
