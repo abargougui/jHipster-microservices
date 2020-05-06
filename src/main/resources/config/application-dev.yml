@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: DEBUG
     io.github.jhipster: DEBUG
-    fr.magnolia.dsi.signmanager: DEBUG
+    fr.magnolia.dsi.signaturemanager: DEBUG
 
 eureka:
   instance:
@@ -45,7 +45,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017
-      database: signmanager
+      database: signaturemanager
   mail:
     host: localhost
     port: 25
