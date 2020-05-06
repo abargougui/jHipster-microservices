@@ -1,16 +1,16 @@
 version: '2'
 services:
-  signmanager-mongodb:
+  signaturemanager-mongodb:
     image: mongo:4.2.3
     ports:
       - '27017:27017'
-    command: mongos --configdb signmanager-mongodb-config
-  signmanager-mongodb-node:
+    command: mongos --configdb signaturemanager-mongodb-config
+  signaturemanager-mongodb-node:
     build:
       context: .
       dockerfile: mongodb/MongoDB.Dockerfile
     command: mongod --replSet rs1 --noprealloc --smallfiles
-  signmanager-mongodb-config:
+  signaturemanager-mongodb-config:
     image: mongo:4.2.3
-    container_name: signmanager-mongodb-config
+    container_name: signaturemanager-mongodb-config
     command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db

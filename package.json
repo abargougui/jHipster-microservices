@@ -1,7 +1,7 @@
 {
-  "name": "signmanager",
+  "name": "signaturemanager",
   "version": "0.0.0",
-  "description": "Description for signmanager",
+  "description": "Description for signaturemanager",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

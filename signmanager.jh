@@ -5,8 +5,8 @@
 
 application {
   config {
-    baseName signmanager,
-    packageName fr.magnolia.dsi.signmanager,
+    baseName signaturemanager,
+    packageName fr.magnolia.dsi.signaturemanager,
     applicationType microservice,
     authenticationType jwt,
     databaseType mongodb,
@@ -17,12 +17,14 @@ application {
     serverPort 8082,
     serviceDiscoveryType eureka
   }
-  entities SignRequest
+  entities SignatureRequest
 }
 
-entity SignRequest {
-  title String required,
-  price BigDecimal required min(0)
+entity SignatureRequest {
+  id String required,
+  transactionId String required,
+  requestDate LocalDate required,
+  status String required
 }
 
-microservice SignRequest with signmanager
+microservice SignatureRequest with signaturemanager

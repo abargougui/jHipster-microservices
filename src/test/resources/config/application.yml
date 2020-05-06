@@ -17,12 +17,12 @@ eureka:
   client:
     enabled: false
   instance:
-    appname: signmanager
-    instanceId: signmanager:${spring.application.instance-id:${random.value}}
+    appname: signaturemanager
+    instanceId: signaturemanager:${spring.application.instance-id:${random.value}}
 
 spring:
   application:
-    name: signmanager
+    name: signaturemanager
   jackson:
     serialization:
       write-durations-as-timestamps: false
@@ -30,7 +30,7 @@ spring:
     mongodb:
       host: localhost
       port: 0
-      database: signmanager
+      database: signaturemanager
   mail:
     host: localhost
   main:
@@ -42,13 +42,13 @@ spring:
       enabled: false
   task:
     execution:
-      thread-name-prefix: signmanager-task-
+      thread-name-prefix: signaturemanager-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: signmanager-scheduling-
+      thread-name-prefix: signaturemanager-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -66,7 +66,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'signmanagerApp'
+    name: 'signaturemanagerApp'
   logging:
     # To test json console appender
     use-json-format: true # By default, logs are in Json format
