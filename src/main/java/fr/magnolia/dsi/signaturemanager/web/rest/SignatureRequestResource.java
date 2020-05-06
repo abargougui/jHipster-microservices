@@ -28,7 +28,7 @@ public class SignatureRequestResource {
 
     private final Logger log = LoggerFactory.getLogger(SignatureRequestResource.class);
 
-    private static final String ENTITY_NAME = "signmanagerSignatureRequest";
+    private static final String ENTITY_NAME = "signaturemanagerSignatureRequest";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

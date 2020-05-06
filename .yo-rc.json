@@ -25,7 +25,7 @@
     "packageFolder": "fr/magnolia/dsi/signaturemanager",
     "applicationType": "microservice",
     "jhipsterVersion": "6.8.0",
-    "creationTimestamp": 1588753320842,
+    "creationTimestamp": 1588755300704,
     "clientPackageManager": "npm",
     "jwtSecretKey": "YTYxZWZkMDdkNjc2ODBlNjA5N2I1ZmY0ODRiNGMyZmQ3NzE4OGI1NDAxMTk0MjMzNjUyNWJmMjBiYTc1OGNmMGU3NzJlMTJmNTNlMGYyZDMzYmJkZmI5NmZjMWQ4ZDYwYWY5NzY2YWU3MGM2MmMxY2I5NzUwNzExMDI2YmY1Y2M=",
     "embeddableLaunchScript": false,
