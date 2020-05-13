@@ -1,4 +1,4 @@
-# signaturemanager
+# ocrclient
 
 This application was generated using JHipster 6.8.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.8.0](https://www.jhipster.tech/documentation-archive/v6.8.0).
 
@@ -18,7 +18,7 @@ For further instructions on how to develop with JHipster, have a look at [Using 
 
 ### Packaging as jar
 
-To build the final jar and optimize the signaturemanager application for production, run:
+To build the final jar and optimize the ocrclient application for production, run:
 
     ./mvnw -Pprod clean verify
 
@@ -72,13 +72,13 @@ For more information, refer to the [Code quality page][].
 
 You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
 
-For example, to start a mongodb database in a docker container, run:
+For example, to start a mysql database in a docker container, run:
 
-    docker-compose -f src/main/docker/mongodb.yml up -d
+    docker-compose -f src/main/docker/mysql.yml up -d
 
 To stop it and remove the container, run:
 
-    docker-compose -f src/main/docker/mongodb.yml down
+    docker-compose -f src/main/docker/mysql.yml down
 
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
