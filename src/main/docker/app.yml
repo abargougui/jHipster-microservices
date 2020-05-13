@@ -1,20 +1,19 @@
 version: '2'
 services:
-  signaturemanager-app:
-    image: signaturemanager
+  ocrclient-app:
+    image: ocrclient
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,swagger
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
       - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
-      - SPRING_DATA_MONGODB_URI=mongodb://signaturemanager-mongodb:27017
-      - SPRING_DATA_MONGODB_DATABASE=signaturemanager
+      - SPRING_DATASOURCE_URL=jdbc:mysql://ocrclient-mysql:3306/ocrclient?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
-  signaturemanager-mongodb:
+  ocrclient-mysql:
     extends:
-      file: mongodb.yml
-      service: signaturemanager-mongodb
+      file: mysql.yml
+      service: ocrclient-mysql
   jhipster-registry:
     extends:
       file: jhipster-registry.yml

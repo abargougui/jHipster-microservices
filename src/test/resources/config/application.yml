@@ -17,20 +17,42 @@ eureka:
   client:
     enabled: false
   instance:
-    appname: signaturemanager
-    instanceId: signaturemanager:${spring.application.instance-id:${random.value}}
+    appname: ocrclient
+    instanceId: ocrclient:${spring.application.instance-id:${random.value}}
 
 spring:
   application:
-    name: signaturemanager
+    name: ocrclient
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:ocrclient;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    name:
+    username:
+    password:
+    hikari:
+      auto-commit: false
   jackson:
     serialization:
       write-durations-as-timestamps: false
-  data:
-    mongodb:
-      host: localhost
-      port: 0
-      database: signaturemanager
+  jpa:
+    database-platform: io.github.jhipster.domain.util.FixedH2Dialect
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    properties:
+      hibernate.id.new_generator_mappings: true
+      hibernate.connection.provider_disables_autocommit: true
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: false
+      hibernate.hbm2ddl.auto: validate
+      hibernate.jdbc.time_zone: UTC
+  liquibase:
+    contexts: test
   mail:
     host: localhost
   main:
@@ -42,13 +64,13 @@ spring:
       enabled: false
   task:
     execution:
-      thread-name-prefix: signaturemanager-task-
+      thread-name-prefix: ocrclient-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: signaturemanager-scheduling-
+      thread-name-prefix: ocrclient-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -66,7 +88,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'signaturemanagerApp'
+    name: 'ocrclientApp'
   logging:
     # To test json console appender
     use-json-format: true # By default, logs are in Json format

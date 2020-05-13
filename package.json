@@ -1,7 +1,7 @@
 {
-  "name": "signaturemanager",
+  "name": "ocrclient",
   "version": "0.0.0",
-  "description": "Description for signaturemanager",
+  "description": "Description for ocrclient",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
