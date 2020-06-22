@@ -17,38 +17,30 @@ eureka:
   client:
     enabled: false
   instance:
-    appname: signaturemanager
-    instanceId: signaturemanager:${spring.application.instance-id:${random.value}}
+    appname: htmltopdf
+    instanceId: htmltopdf:${spring.application.instance-id:${random.value}}
 
 spring:
   application:
-    name: signaturemanager
+    name: htmltopdf
   jackson:
     serialization:
       write-durations-as-timestamps: false
-  data:
-    mongodb:
-      host: localhost
-      port: 0
-      database: signaturemanager
   mail:
     host: localhost
   main:
     allow-bean-definition-overriding: true
   messages:
     basename: i18n/messages
-  mvc:
-    favicon:
-      enabled: false
   task:
     execution:
-      thread-name-prefix: signaturemanager-task-
+      thread-name-prefix: htmltopdf-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: signaturemanager-scheduling-
+      thread-name-prefix: htmltopdf-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -66,10 +58,10 @@ server:
 
 jhipster:
   clientApp:
-    name: 'signaturemanagerApp'
+    name: 'htmltopdfApp'
   logging:
     # To test json console appender
-    use-json-format: true # By default, logs are in Json format
+    use-json-format: false
     logstash:
       enabled: false
       host: localhost
