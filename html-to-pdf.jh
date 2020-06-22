@@ -1,0 +1,21 @@
+/*
+ * This is a microservice blog sample with Gateway and two microservice applications
+ * This uses JHipster registry for service discovery and OIDC authentication
+ */
+
+application {
+  config {
+    baseName htmltopdf,
+    packageName fr.magnolia.dsi.htmltopdf,
+    applicationType microservice,
+    authenticationType jwt,
+    serverPort 8082,
+    databaseType no,
+    prodDatabaseType no,
+    devDatabaseType no,
+    serviceDiscoveryType eureka
+  }
+}
+
+
+microservice * with htmltopdf
