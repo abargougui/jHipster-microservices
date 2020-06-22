@@ -1,14 +1,14 @@
 {
   "generator-jhipster": {
     "authenticationType": "jwt",
-    "cacheProvider": "ehcache",
+    "cacheProvider": "hazelcast",
     "serverPort": "8082",
     "serviceDiscoveryType": "eureka",
     "skipUserManagement": true,
-    "baseName": "signaturemanager",
+    "baseName": "htmltopdf",
     "buildTool": "maven",
-    "databaseType": "mongodb",
-    "devDatabaseType": "mongodb",
+    "databaseType": "no",
+    "devDatabaseType": "no",
     "enableHibernateCache": false,
     "enableSwaggerCodegen": false,
     "enableTranslation": true,
@@ -16,15 +16,15 @@
     "languages": ["en", "fr"],
     "messageBroker": false,
     "nativeLanguage": "en",
-    "prodDatabaseType": "mongodb",
+    "prodDatabaseType": "no",
     "searchEngine": false,
     "skipClient": true,
     "testFrameworks": [],
     "websocket": false,
-    "packageName": "fr.magnolia.dsi.signaturemanager",
-    "packageFolder": "fr/magnolia/dsi/signaturemanager",
+    "packageName": "fr.magnolia.dsi.htmltopdf",
+    "packageFolder": "fr/magnolia/dsi/htmltopdf",
     "applicationType": "microservice",
-    "jhipsterVersion": "6.8.0",
+    "jhipsterVersion": "6.9.1",
     "creationTimestamp": 1588753320842,
     "clientPackageManager": "npm",
     "jwtSecretKey": "YTYxZWZkMDdkNjc2ODBlNjA5N2I1ZmY0ODRiNGMyZmQ3NzE4OGI1NDAxMTk0MjMzNjUyNWJmMjBiYTc1OGNmMGU3NzJlMTJmNTNlMGYyZDMzYmJkZmI5NmZjMWQ4ZDYwYWY5NzY2YWU3MGM2MmMxY2I5NzUwNzExMDI2YmY1Y2M=",
@@ -34,5 +34,5 @@
     "otherModules": [],
     "blueprints": []
   },
-  "entities": ["SignatureRequest"]
+  "entities": []
 }
